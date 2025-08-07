@@ -1,11 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GridSystem</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GridLayout</title>
+    <link rel="stylesheet" href="./assets/css/grid-layout.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        background-color: gray;
+        text-align: center;
+      }
+      .course-item {
+        background-color: #f0f0f0;
+        height: 260px;
+        border-radius: 10px;
+      }
+      h1 {
+        color: orchid;
+        line-height: 260px;
+        margin: 0;
+      }
+
+      .category {
+        background-color: rgb(83, 76, 37);
+        height: 260px;
+        border-radius: 10px;
+      }
+      .category ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .category li {
+        color: white;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+      .category li:last-child {
+        border-bottom: none;
+      }
+      .category li:hover {
+        background-color: #555;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <!-- Column: .col
+    Prefix class:
+    c - mobile
+    m - tablet
+    l- desktop
+    xl - large desktop
+    Example: c-4 m-6 l-3 xl-2
+-->
+
+  <body>
+    <div class="grid wide container">
+      <div class="row">
+        <div class="col l-3 m-6 c-12">
+          <div class="course-item">
+            <h1>Course 1</h1>
+          </div>
+        </div>
+        <div class="col l-3 m-6 c-12">
+          <div class="course-item">
+            <h1>Course 2</h1>
+          </div>
+        </div>
+        <div class="col l-3 m-6 c-12">
+          <div class="course-item">
+            <h1>Course 3</h1>
+          </div>
+        </div>
+        <div class="col l-3 m-6 c-12">
+          <div class="course-item">
+            <h1>Course 4</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      style="width: 100%; height: 50px; background-color: aqua; margin: 30px 0"
+    >
+      <h1 style="line-height: 50px; text-align: center">Example</h1>
+    </div>
+
+    <div class="grid wide container">
+      <div class="row">
+        <div class="col l-3 m-0 c-0">
+          <div class="category">
+            <ul>
+              <li>Javascript</li>
+              <li>NodeJs</li>
+              <li>Vue</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col l-9 m-12 c-12">
+          <div class="row">
+            <div class="col l-4 m-6 c-12">
+              <div class="course-item">
+                <h1>Course 5</h1>
+              </div>
+            </div>
+            <div class="col l-4 m-6 c-12">
+              <div class="course-item">
+                <h1>Course 6</h1>
+              </div>
+            </div>
+            <div class="col l-4 m-6 c-12">
+              <div class="course-item">
+                <h1>Course 7</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
